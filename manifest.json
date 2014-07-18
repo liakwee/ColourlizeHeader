@@ -1,5 +1,5 @@
 {
-  "name": "Colour Header",
+  "name": "CHANGE THIS : Extension boilerplate",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "This extension was created with the awesome extensionizr.com",
@@ -11,19 +11,37 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
+    "page": "src/bg/background.html",
     "persistent": true
   },
   "options_page": "src/options/index.html",
   "browser_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo"
+    "default_title": "browser action demo"/*,
+    "default_popup": "src/browser_action/browser_action.html"*/
   },
   "permissions": [
+    "notifications",
     "tabs",
-    "https://*/*",
-    "http://*/* "
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
   ]
 }
