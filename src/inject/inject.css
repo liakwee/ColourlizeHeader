@@ -1,3 +1,59 @@
-/**
- * Place your custom CSS styles here.
- **/
+#ch-floatMenu {
+    position:absolute;
+    top:0px;
+    left:0;
+    width:100px;
+    margin:0;
+    font:12px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    color:#000;
+    z-index: 9999;
+}
+
+
+
+
+#ch-floatMenu ul {
+    list-style:none;
+    margin:0px;
+    padding:0;
+}
+#ch-floatMenu ul li {
+    display:block;
+    margin-left:0px;
+    border:1px solid #333;
+    outline: none;
+    border-left:6px solid #666;
+    color:#000;
+    font-weight:bold;
+    padding:5px 5px 5px 5px;
+}
+
+.ch-h1-tags{
+    outline: #ff0000 dotted 1px;
+    background-color:#6e9ef0;
+}
+
+.ch-h2-tags{
+    outline: #ff0000 dotted 1px;
+    background-color:#bd66bd;
+}
+
+.ch-h3-tags{
+    outline: #ff0000 dotted 1px;
+    background-color:#81d166;
+}
+
+.ch-h4-tags{
+    outline: #ff0000 dotted 1px;
+    background-color:#e8b864;
+}
+
+.ch-h5-tags{
+    outline: #ff0000 dotted 1px;
+    background-color:#e87364;
+}
+
+.ch-h6-tags{
+    outline: #ff0000 dotted 1px;
+    background-color:#e3e858;
+}
