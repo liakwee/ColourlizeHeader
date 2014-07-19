@@ -2,8 +2,67 @@
 <html>
 <head>
 	<title></title>
+    <script src="../inject/jquery.min.js"></script>
+    <script src="colpick.js"></script>
+    <script src="option.js"></script>
+    <link rel="stylesheet" href="colpick.css"/>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font:12px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        }
+        .wrapper{
+            width: 960px;
+            margin: 0 auto;;
+        }
+        .colpicker {
+            margin:0;
+            padding:0;
+            width:70px;
+            height:20px;
+            line-height:20px;
+        }
+        
+        input{
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #h1{
+            border-right:20px solid #6e9ef0;
+        }
+        #h2{
+            border-right:20px solid #bd66bd;
+        }
+        #h3{
+            border-right:20px solid #81d166;
+        }
+        #h4{
+            border-right:20px solid #e8b864;
+        }
+        #h5{
+            border-right:20px solid #e87364;
+        }
+        #h6{
+            border-right:20px solid #e3e858;
+        }
+    </style>
 </head>
 <body>
+<div class="wrapper">
+    <h1>Colour Header Setting</h1>
+    <label for="h1">H1 Colour: </label><input type="text" id="h1" class="colpicker" value="6e9ef0"></input><br/><br/>
+    <label for="h2">H2 Colour: </label><input type="text" id="h2" class="colpicker" value="bd66bd"></input><br/><br/>
+    <label for="h3">H3 Colour: </label><input type="text" id="h3" class="colpicker" value="81d166"></input><br/><br/>
+    <label for="h4">H4 Colour: </label><input type="text" id="h4" class="colpicker" value="e8b864"></input><br/><br/>
+    <label for="h5">H5 Colour: </label><input type="text" id="h5" class="colpicker" value="e87364"></input><br/><br/>
+    <label for="h6">H6 Colour: </label><input type="text" id="h6" class="colpicker" value="e3e858"></input><br/><br/>
+
+    <button id="save">Save</button>
+    <button id="reset">Reset to default</button>
+</div>
+
 
 </body>
 </html>
