@@ -1,3 +1,13 @@
+var defaultColour = [
+    '6e9ef0',
+    'bd66bd',
+    '81d166',
+    'e8b864',
+    'e87364',
+    'e3e858'
+];
+
+
 
 function searching() {
     console.log("startSearching");
