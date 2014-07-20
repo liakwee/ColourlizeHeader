@@ -1,4 +1,15 @@
 $(document).ready(function(){
+    $('.msg').hide();
+    chrome.storage.sync.get('chSettings', function(data){
+        for(var i=0; i< data.chSettings.length; i++){
+            $('#h'+(i+1)).val(data.chSettings[i]);
+            $('#h'+(i+1)).css({
+                borderRightWidth: 20,
+                borderRightStyle: 'solid',
+                borderRightColor: '#'+data.chSettings[i]
+            });
+        }
+    });
 
     initPicker();
 
@@ -16,8 +27,35 @@ $(document).ready(function(){
             $(this).val(defaultColour[i]);
         });
 
+        for(var i=0; i< defaultColour.length; i++){
+            $('#h'+(i+1)).val(defaultColour[i]);
+            $('#h'+(i+1)).css({
+                borderRightWidth: 20,
+                borderRightStyle: 'solid',
+                borderRightColor: '#'+defaultColour[i]
+            });
+        }
+
         initPicker();
     })
+
+    $('#save').on('click', function(){
+        var settings = [];
+
+        $('.colpicker').each(function(){
+            settings.push($(this).val());
+        });
+        console.log(settings);
+        // Save it using the Chrome extension storage API.
+        chrome.storage.sync.set({'chSettings': settings}, function() {
+            // Notify that we saved.
+            console.log('Settings saved');
+            $('.msg').fadeIn(500);
+            setTimeout(function(){
+                $('.msg').fadeOut(300);
+            }, 1000);
+        });
+    });
 });
 
 
@@ -38,3 +76,4 @@ function initPicker(){
         });
     });
 }
+

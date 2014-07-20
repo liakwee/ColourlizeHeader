@@ -1,12 +1,12 @@
 
 function searching() {
     console.log("startSearching");
-    var h1 = $('body').find("h1");
-    var h2 = $('body').find("h2");
-    var h3 = $('body').find("h3");
-    var h4 = $('body').find("h4");
-    var h5 = $('body').find("h5");
-    var h6 = $('body').find("h6");
+    var h1 = $('body').find("h1"),
+        h2 = $('body').find("h2"),
+        h3 = $('body').find("h3"),
+        h4 = $('body').find("h4"),
+        h5 = $('body').find("h5"),
+        h6 = $('body').find("h6");
 
     for(var i=1; i<=6; i++){
         $('body').find('h'+i).addClass('ch-h'+i+'-tags');
@@ -24,7 +24,7 @@ function searching() {
 
 
     $('body').append(floatHTML);
-
+    getSettings();
     $(name).fadeIn(1000);
 
 
@@ -35,11 +35,32 @@ function searching() {
 
     });
 
+
+
+
+
+    $('#ch-floatMenu li').each(function(i){
+        var number = $('h'+(i+1)).length;
+        console.log((i+1) +' '+number);
+        $(this).html('H'+(i+1)+' Tags ('+number+')');
+    })
+
 }
 
 
 function header(){
     $(":header").css({ background:'#CCC', color:'blue' });
+}
+
+
+function getSettings(){
+    chrome.storage.sync.get('chSettings', function(data){
+        for(var i=0; i< data.chSettings.length; i++){
+            $('.ch-h'+(i+1)+'-tags').css({
+                backgroundColor: '#'+data.chSettings[i]
+            });
+        }
+    });
 }
 
 

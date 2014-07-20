@@ -20,6 +20,7 @@
         "default_title": "browser action demo"
     },
     "permissions": [
+        "storage",
         "notifications",
         "tabs",
         "http://*/*",
