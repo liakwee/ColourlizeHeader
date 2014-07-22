@@ -30,30 +30,30 @@
 
 .ch-h1-tags{
     outline: #ff0000 dotted 1px;
-    background-color:#6e9ef0;
+    background-color:#6e9ef0 !important;
 }
 
 .ch-h2-tags{
     outline: #ff0000 dotted 1px;
-    background-color:#bd66bd;
+    background-color:#bd66bd !important;
 }
 
 .ch-h3-tags{
     outline: #ff0000 dotted 1px;
-    background-color:#81d166;
+    background-color:#81d166 !important;
 }
 
 .ch-h4-tags{
     outline: #ff0000 dotted 1px;
-    background-color:#e8b864;
+    background-color:#e8b864 !important;
 }
 
 .ch-h5-tags{
     outline: #ff0000 dotted 1px;
-    background-color:#e87364;
+    background-color:#e87364 !important;
 }
 
 .ch-h6-tags{
     outline: #ff0000 dotted 1px;
-    background-color:#e3e858;
+    background-color:#e3e858 !important;
 }

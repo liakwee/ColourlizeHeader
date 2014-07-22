@@ -7,15 +7,33 @@
     <script src="option.js"></script>
     <link rel="stylesheet" href="colpick.css"/>
     <style>
+        html{
+            height: 100%;
+            box-sizing: border-box;
+        }
         body{
             padding: 0;
             margin: 0;
+            min-height: 100%;
+            display: block;
+
             font:12px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+            background:
+            linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+            background-color: #131313;
+            background-size: 20px 20px;
         }
         .wrapper{
-            width: 960px;
-            margin: 0 auto;
-            padding: 0 10px;
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
         }
         .colpicker {
             margin:0;
@@ -48,6 +66,8 @@
         #h6{
             border-right:20px solid #e3e858;
         }
+
+
     </style>
 </head>
 <body>

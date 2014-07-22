@@ -51,7 +51,7 @@ function searching() {
 
     $('#ch-floatMenu li').each(function(i){
         var number = $('h'+(i+1)).length;
-        console.log((i+1) +' '+number);
+        //console.log((i+1) +' '+number);
         $(this).html('H'+(i+1)+' Tags ('+number+')');
     })
 
